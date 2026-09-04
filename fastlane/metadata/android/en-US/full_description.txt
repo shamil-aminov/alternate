@@ -1,0 +1,22 @@
+Alternate turns an Android phone into a MIDI keypad and plugs it into osu! over
+a USB cable. The whole screen is one button. Every tap fires one of two notes,
+alternating, so a single finger produces the alternating key presses a stream
+needs, at speeds no single key can reach.
+
+osu!lazer reads MIDI natively, so there is no bridge to install, no driver and
+no key-mapping utility in the middle. One cable, one setting in the game.
+
+The app is built around one number: the time from glass to MIDI. The note goes
+out before any animation state is touched, nothing allocates on the path from a
+touch to the MIDI byte, touch dispatch is unbuffered on Android 13 and up, and
+the fastest display mode is requested at startup.
+
+Features:
+
+* Tempo gauge scaled to the tempos that decide whether you pass a map
+* Chain and tap counters
+* Adjustable debounce and MIDI notes
+* Do Not Disturb while playing, so a notification cannot end a run
+* Lite graphics mode for phones that drop frames
+* Tap diagnostics: last interval, dropped taps, held notes
+* No network access, no analytics, no accounts

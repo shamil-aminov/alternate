@@ -1,0 +1,33 @@
+# Android / Gradle
+*.iml
+.gradle
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+.kotlin
+
+# Local configuration — never commit
+local.properties
+keystore.properties
+*.jks
+*.keystore
+
+# IDE
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/deploymentTargetDropDown.xml
+/.artifacts
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local build artifacts
+/dist

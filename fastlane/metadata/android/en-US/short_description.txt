@@ -1,0 +1,1 @@
+Turns the phone into a USB MIDI keypad for osu!: every tap alternates two notes.

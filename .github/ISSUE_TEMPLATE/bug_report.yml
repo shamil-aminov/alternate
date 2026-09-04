@@ -1,0 +1,56 @@
+name: Bug report
+description: Something does not work
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Connect over USB and pick MIDI
+        2. Press START
+        3. ...
+    validations:
+      required: true
+
+  - type: input
+    id: phone
+    attributes:
+      label: Phone and Android version
+      placeholder: Pixel 7, Android 14
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: game
+    attributes:
+      label: Game
+      options:
+        - osu!lazer
+        - osu!stable
+        - Something else
+        - Not relevant
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Tap diagnostics
+      description: >
+        If the problem is about missed or doubled taps, turn on
+        Settings → Show tap diagnostics and paste what the overlay shows.

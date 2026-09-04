@@ -1,0 +1,21 @@
+name: Feature request
+description: Suggest something
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve
+      description: >
+        Describe the situation you are in, not the feature you have in mind.
+        Alternate does one thing on purpose, so the case for adding to it
+        starts with what goes wrong today.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you had in mind
+    validations:
+      required: true

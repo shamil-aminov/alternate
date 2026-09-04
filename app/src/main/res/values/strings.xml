@@ -1,0 +1,101 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ALTERNATE</string>
+
+    <!-- Connection screen -->
+    <string name="config_tagline">MIDI keypad for osu!</string>
+    <string name="config_panel_device">MIDI DEVICE</string>
+    <string name="config_panel_system">SYSTEM</string>
+    <string name="config_start">START</string>
+    <string name="config_demo">DEMO</string>
+    <string name="config_connecting">CONNECTING</string>
+    <string name="config_no_devices_hint">No device yet. Plug into the PC and pick MIDI in the USB notification.</string>
+    <string name="config_unsupported">MIDI NOT SUPPORTED</string>
+    <string name="config_unsupported_hint">This device has no system MIDI. An Android phone with USB MIDI support is required.</string>
+    <string name="config_unknown_device">UNKNOWN</string>
+    <string name="config_settings">SETTINGS</string>
+    <string name="config_how_it_works">HOW IT WORKS</string>
+
+    <!-- Keypad readouts -->
+    <string name="readout_chain">CHAIN</string>
+    <string name="readout_bpm">BPM</string>
+    <string name="readout_total">TOTAL</string>
+    <string name="keypad_exit_hint">PRESS BACK AGAIN TO EXIT</string>
+    <string name="keypad_demo">DEMO — NO DEVICE CONNECTED</string>
+    <string name="keypad_diagnostics">LAST %1$d MS · DROPPED %2$d · HELD %3$d</string>
+
+    <!-- Settings screen -->
+
+    <string name="settings_panel_engine">ENGINE</string>
+    <string name="settings_debounce">Debounce</string>
+    <string name="settings_debounce_hint">Ignores taps closer together than this.</string>
+    <string name="settings_chain_window">Chain window</string>
+    <string name="settings_chain_window_hint">Pause that breaks the chain.</string>
+
+    <string name="settings_panel_midi">MIDI</string>
+    <string name="settings_note_left">Left note</string>
+    <string name="settings_note_right">Right note</string>
+    <string name="settings_note_hint">Must match the keys bound in the game.</string>
+
+    <string name="settings_panel_screen">SCREEN</string>
+    <string name="settings_keep_screen_on">Keep screen on</string>
+    <string name="settings_hide_bars">Hide system bars</string>
+    <string name="settings_hide_bars_hint">Fullscreen everywhere. Avoids stray swipes at the edge.</string>
+    <string name="settings_lite_graphics">Lite graphics</string>
+    <string name="settings_lite_graphics_hint">Fewer effects. Try it if frames stutter.</string>
+
+    <string name="settings_panel_notifications">NOTIFICATIONS</string>
+    <string name="settings_auto_dnd">Do Not Disturb while playing</string>
+    <string name="settings_auto_dnd_hint">Notifications steal focus and end runs.</string>
+    <string name="settings_dnd_grant">Let Alternate silence notifications</string>
+    <string name="settings_dnd_grant_hint">Android asks once. The switch above cannot work without it.</string>
+
+    <string name="settings_panel_diagnostics">DIAGNOSTICS</string>
+    <string name="settings_panel_reset">RESET</string>
+    <string name="settings_show_diagnostics">Tap diagnostics</string>
+    <string name="settings_show_diagnostics_hint">Shows tap intervals on the pad.</string>
+
+    <string name="settings_reset">Reset to defaults</string>
+    <string name="settings_reset_hint">Puts every setting back the way it shipped.</string>
+    <string name="settings_reset_confirm_title">RESET TO DEFAULTS</string>
+    <string name="settings_reset_confirm_body">Every setting goes back to the way it shipped. Notes, debounce, screen and notifications.</string>
+    <!--
+        Every button in this app is set in caps — START, DEMO, NEXT, DONE.
+        Lint would have this one alone follow the platform "Cancel", which
+        would make the one button that appears beside RESET the only one
+        shouting in a different voice.
+    -->
+    <string name="action_cancel" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="action_reset">RESET</string>
+    <string name="settings_unit_ms">%1$d ms</string>
+
+    <!-- How it works: one card per step -->
+    <string name="howto_next">NEXT</string>
+    <string name="howto_allow">ALLOW</string>
+    <string name="howto_allowed">ALLOWED</string>
+    <string name="howto_done">DONE</string>
+
+    <string name="howto_intro_title">ALTERNATE</string>
+    <string name="howto_intro_body">A MIDI keypad for osu!</string>
+
+    <string name="howto_step_1_title">PLUG IN</string>
+    <string name="howto_step_1_body">Connect the phone to the PC with a data cable.\nOpen the USB notification and pick MIDI.</string>
+
+    <string name="howto_step_2_title">TURN ON MIDI</string>
+    <string name="howto_step_2_body">Open the input settings in osu!lazer.\nSwitch MIDI input on.</string>
+
+    <string name="howto_step_3_title">BIND THE KEYS</string>
+    <string name="howto_step_3_body">In the osu! key settings, select the first key and tap the pad.\nSelect the second key and tap the pad again.</string>
+
+    <string name="howto_step_4_title">SILENCE THE PHONE</string>
+    <string name="howto_step_4_body">A notification pops up and the run is over.\nLet Alternate silence them while you play.</string>
+
+    <string name="howto_step_5_title">PLAY</string>
+    <string name="howto_step_5_body">Tap anywhere — the whole screen is the button.\nPress Back twice to leave.</string>
+
+    <!-- MIDI connection errors -->
+    <string name="error_midi_unavailable">MIDI is unavailable on this device</string>
+    <string name="error_no_input_port">The device has no input port</string>
+    <string name="error_open_failed">Could not open the device</string>
+    <string name="error_port_busy">The port is held by another app</string>
+    <string name="error_select_device">Select a MIDI device first</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        The palette lives in Kotlin, in ui/theme/Color.kt. This one colour is
+        here because the launch theme needs it before any Compose code runs:
+        without it the window flashes the system background on cold start.
+    -->
+    <color name="black">#FF000000</color>
+</resources>
