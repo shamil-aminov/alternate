@@ -1,0 +1,27 @@
+AntiFeatures: []
+Categories:
+  - Games
+  - Multimedia
+License: MIT
+AuthorName: Shamil Aminov
+SourceCode: https://github.com/shamil-aminov/alternate
+IssueTracker: https://github.com/shamil-aminov/alternate/issues
+Changelog: https://github.com/shamil-aminov/alternate/blob/HEAD/CHANGELOG.md
+
+AutoName: Alternate
+
+RepoType: git
+Repo: https://github.com/shamil-aminov/alternate.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: v1.0.0
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 1

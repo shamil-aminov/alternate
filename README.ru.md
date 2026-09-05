@@ -133,7 +133,7 @@ flowchart LR
 ./gradlew connectedAndroidTest
 ```
 
-Релизная сборка подписывается debug-ключом, пока вы не подставите свой —
+Релизная сборка остаётся неподписанной, пока вы не подставите свой ключ —
 см. [docs/RELEASING.md](docs/RELEASING.md) и
 см. [CONTRIBUTING.md](CONTRIBUTING.md).
 

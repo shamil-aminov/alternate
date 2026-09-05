@@ -9,11 +9,10 @@ plugins {
  * Release signing.
  *
  * Credentials never live in the repository. They come from either
- * `keystore.properties` in the project root (local builds, git-ignored) or
- * from environment variables (CI, via repository secrets). When neither is
- * present the release build falls back to the debug key, so anyone can clone
- * and `assembleRelease` without extra setup — such an APK just cannot be
- * published as an update to the official one.
+ * `keystore.properties` in the project root (local builds, git-ignored) or from
+ * environment variables (CI, via repository secrets). With neither present the
+ * release build is left unsigned, which is what F-Droid's builder expects: it
+ * compiles from source and applies its own signature afterwards.
  *
  * See CONTRIBUTING.md for how to generate a keystore.
  */
@@ -61,11 +60,7 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
-            signingConfig = if (hasReleaseSigning) {
-                signingConfigs.getByName("release")
-            } else {
-                signingConfigs.getByName("debug")
-            }
+            signingConfig = if (hasReleaseSigning) signingConfigs.getByName("release") else null
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

@@ -125,4 +125,4 @@ First public release.
 - The MIDI port was not dropped when its device was unplugged.
 - The core radius used for spark spawning went stale after a screen rotation.
 
-[1.0.0]: https://github.com/shamik230/alternate/releases/tag/v1.0.0
+[1.0.0]: https://github.com/shamil-aminov/alternate/releases/tag/v1.0.0

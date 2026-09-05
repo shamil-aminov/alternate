@@ -3,7 +3,7 @@
 **Your phone as a USB MIDI keypad for osu!**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![CI](https://github.com/shamik230/alternate/actions/workflows/ci.yml/badge.svg)](https://github.com/shamik230/alternate/actions/workflows/ci.yml)
+[![CI](https://github.com/shamil-aminov/alternate/actions/workflows/ci.yml/badge.svg)](https://github.com/shamil-aminov/alternate/actions/workflows/ci.yml)
 
 *Русская версия: [README.ru.md](README.ru.md)*
 
@@ -134,7 +134,7 @@ Instrumented tests (needs a connected device or emulator):
 ./gradlew connectedAndroidTest
 ```
 
-A release build is signed with the debug key unless you supply your own —
+A release build is left unsigned unless you supply your own keystore —
 see [docs/RELEASING.md](docs/RELEASING.md) and
 see [CONTRIBUTING.md](CONTRIBUTING.md).
 

@@ -49,8 +49,8 @@ UI. Keeping it free of them is what makes it testable on the JVM.
 
 ## Release signing
 
-Release builds fall back to the debug key, so `./gradlew assembleRelease`
-works on a fresh clone. To sign with your own key, generate a keystore:
+Without a keystore the release build is left unsigned, which is what F-Droid
+expects. To sign with your own key, generate a keystore:
 
 ```bash
 keytool -genkeypair -v -keystore release.jks -keyalg RSA -keysize 2048 -validity 10000 -alias alternate

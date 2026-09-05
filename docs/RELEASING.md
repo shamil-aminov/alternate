@@ -19,8 +19,8 @@ Actions):
 | `KEY_ALIAS` | `alternate` |
 | `KEY_PASSWORD` | the key password |
 
-Without them the release still builds, signed with the debug key — fine for a
-dry run, not for anything anyone should install.
+Without them the release still compiles, but the APK is unsigned — fine for a
+dry run, and the shape F-Droid builds from, but not installable as-is.
 
 ## Cutting a release
 
@@ -51,8 +51,16 @@ cannot update one another — a user has to pick one.
 
 Submission is a merge request against
 [fdroiddata](https://gitlab.com/fdroid/fdroiddata) adding
-`metadata/sh.aminov.alternate.yml`. Listing text and screenshots are already in
-`fastlane/metadata/`, which is where F-Droid looks for them.
+`metadata/sh.aminov.alternate.yml`. That file is ready to copy at
+[docs/fdroid/sh.aminov.alternate.yml](fdroid/sh.aminov.alternate.yml). Listing
+text and screenshots are already in `fastlane/metadata/`, which is where
+F-Droid looks for them.
+
+Two things must be true before the merge request is worth opening: the tag the
+build points at (`v1.0.0`) has to exist on GitHub, and F-Droid's buildserver
+has to support the toolchain this project uses — AGP 9.4.0 and compile SDK 37
+are recent, and their images lag behind. If the build fails on their side the
+fix is usually to pin an older AGP, not to change the app.
 
 ## Google Play
 
