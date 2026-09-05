@@ -14,24 +14,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up JDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '25'
 
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v5
 
       - name: Unit tests
         run: ./gradlew test --stacktrace
 
       # The keystore never lives in the repository. It is held as a base64
       # secret and written to disk only for the length of this job. Without
-      # the secret the build still succeeds, signed with the debug key —
-      # useful for a dry run, not for a published update.
+      # the secret the build still succeeds but the APK comes out unsigned,
+      # which is a dry run, not something to publish.
       - name: Decode keystore
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
@@ -40,7 +40,7 @@ jobs:
             echo "$KEYSTORE_BASE64" | base64 -d > release.jks
             echo "ALTERNATE_STORE_FILE=$(pwd)/release.jks" >> "$GITHUB_ENV"
           else
-            echo "No keystore secret set; the APK will carry the debug key."
+            echo "No keystore secret set; the APK will be unsigned."
           fi
 
       - name: Assemble release
@@ -53,8 +53,13 @@ jobs:
       - name: Name the APK after the tag
         run: |
           mkdir -p dist
-          cp app/build/outputs/apk/release/app-release.apk \
-             "dist/alternate-${GITHUB_REF_NAME}.apk"
+          signed=app/build/outputs/apk/release/app-release.apk
+          if [ -f "$signed" ]; then
+            cp "$signed" "dist/alternate-${GITHUB_REF_NAME}.apk"
+          else
+            echo "::error::No signed APK — set the keystore secrets." >&2
+            exit 1
+          fi
 
       - name: Remove the keystore
         if: always()
