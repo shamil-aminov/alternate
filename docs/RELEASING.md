@@ -9,12 +9,19 @@ it means never being able to update the app for anyone who installed it.
 keytool -genkeypair -v -keystore release.jks -keyalg RSA -keysize 2048 -validity 10000 -alias alternate
 ```
 
+`keytool` ships with the JDK and is rarely on `PATH` on Windows. Android
+Studio's bundled runtime has it:
+
+```powershell
+& "C:\Program Files\Android\Android Studio\jbr\bin\keytool.exe" -genkeypair -v -keystore release.jks -keyalg RSA -keysize 2048 -validity 10000 -alias alternate
+```
+
 Add four repository secrets on GitHub (Settings → Secrets and variables →
 Actions):
 
 | Secret | Value |
 | --- | --- |
-| `KEYSTORE_BASE64` | `base64 -w0 release.jks` |
+| `KEYSTORE_BASE64` | `base64 -w0 release.jks`, or on PowerShell `[Convert]::ToBase64String([IO.File]::ReadAllBytes("release.jks"))` |
 | `KEYSTORE_PASSWORD` | the store password |
 | `KEY_ALIAS` | `alternate` |
 | `KEY_PASSWORD` | the key password |
