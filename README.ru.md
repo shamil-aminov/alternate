@@ -1,10 +1,24 @@
-# Alternate
+<p align="center">
+  <img src="docs/logo.svg" width="200" alt="Alternate">
+</p>
 
-**Телефон как USB MIDI-падд для osu!**
+<h1 align="center">Alternate</h1>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+<p align="center">
+  <b>Телефон как USB MIDI-падд для osu!</b>
+</p>
 
-*English version: [README.md](README.md)*
+<p align="center">
+  <a href="https://github.com/shamil-aminov/alternate/actions/workflows/ci.yml"><img src="https://github.com/shamil-aminov/alternate/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/shamil-aminov/alternate/releases/latest"><img src="https://img.shields.io/github/v/release/shamil-aminov/alternate?label=release&color=00D9F2" alt="Release"></a>
+  <a href="https://github.com/shamil-aminov/alternate/releases"><img src="https://img.shields.io/github/downloads/shamil-aminov/alternate/total?label=downloads&color=0891B2" alt="Downloads"></a>
+  <a href="#что-нужно"><img src="https://img.shields.io/badge/Android-7.0%2B-00D9F2?logo=android&logoColor=white" alt="Android 7.0+"></a>
+  <a href="https://osu.ppy.sh"><img src="https://img.shields.io/badge/osu!lazer-MIDI-FF66AA?logo=osu&logoColor=white" alt="osu!lazer"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/shamil-aminov/alternate?color=00D9F2" alt="License: MIT"></a>
+  <a href="https://aminov.sh/blog/alternate"><img src="https://img.shields.io/badge/история-aminov.sh-000000" alt="История"></a>
+</p>
+
+<p align="center"><i>English version: <a href="README.md">README.md</a></i></p>
 
 ![Падд в работе](docs/cover.png)
 

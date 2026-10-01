@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-label="Alternate">
+  <circle cx="54" cy="54" r="53.5" fill="#000" stroke="#2a2f37" stroke-width="1"/>
+  <g transform="translate(54 54) scale(0.84) translate(-54 -54)" fill="none" stroke="#00D9F2">
+    <path d="M54,54m-5.4,0a5.4,5.4 0,1 1,10.8 0a5.4,5.4 0,1 1,-10.8 0" fill="#00D9F2" stroke="none"/>
+    <path d="M54,54m-24.3,0a24.3,24.3 0,1 1,48.6 0a24.3,24.3 0,1 1,-48.6 0" stroke-width="4.3"/>
+    <path d="M76.8,22.5 A38.9,38.9 0 0 1 92.7,50 M69.8,89.5 A38.9,38.9 0 0 1 38.2,89.5 M15.3,50 A38.9,38.9 0 0 1 31.2,22.5" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+</svg>
